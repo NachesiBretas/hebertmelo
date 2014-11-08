@@ -1,0 +1,26 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	color: #333333;
+	text-align: center;
+}
+
+.title{
+	font-family: 'Wire One', Helvetica, Arial, sans-serif;
+	font-size: 5em;
+}
+
+.second-title{
+	font-size: 1em;
+}
+
+p {
+	font-size: 14px;
+}
+
+img{ 
+	margin: 5%;
+	width: 100%;
+}
+
