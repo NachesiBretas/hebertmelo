@@ -10,7 +10,7 @@ body {
 	height: 100%;
 }
 
-p {
+p, td {
 	font-size: 14px;
 }
 
@@ -278,14 +278,17 @@ button#top-menu-button:focus {
 
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-border-top: none;
+border: none;
 padding: 4px;
-text-align: center;
 }
 
-.form{
-	padding-left: 100px;
-	width: 95%;
+
+/********************************************************/
+/*                   UI - Buttons                       */
+/********************************************************/
+
+.btn-default {
+	background-color: #999999;
 }
 
 
