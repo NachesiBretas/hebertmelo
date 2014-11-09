@@ -1,11 +1,154 @@
+/********************************************************/
+/*                   	Tags	                        */
+/********************************************************/
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-size: 20px;
 	color: #333333;
 	text-align: center;
+	height: 100%;
 }
 
+p {
+	font-size: 14px;
+}
+
+.home-sections-preview div img{ 
+	margin: 5%;
+	width: 87%;
+}
+
+.gallery-large-image{ 
+	margin: 5%;
+	width: 90%;
+}
+
+body, #content 
+{
+	overflow-x = hidden;
+}
+
+/********************************************************/
+/*                    Top bar 		                    */
+/********************************************************/
+#top-row
+{
+	height: 90px;
+}
+
+
+#top-row-menu
+{
+	padding-right: 5%;
+	padding-top: 2%;
+}
+
+#top-row-logo img 
+{
+	width:300px; 
+	margin-top: 3%;
+}
+
+
+
+/********************************************************/
+/*                    Navigation bar                    */
+/********************************************************/
+.dropdown{
+	float: right;
+}
+
+.navbar-toggle {
+	display:block;
+	background: rgba(255, 255, 255, 0.2);
+	top:10px; 
+	outline: 0;
+	opacity: 1;
+	-webkit-transition: all .35s;
+	   -moz-transition: all .35s;
+	        transition: all .35s;
+}
+
+.navbar-toggle {
+background: rgba(0, 0, 0, 0.12);
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+	margin-top: 4px;
+}
+.open .navbar-toggle { 
+	top:-70px; 
+	opacity: 0;  
+}
+.dropdown-menu {
+	top: -14em;
+	font-size: 13px;
+	background:none;
+	border:0 none;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display:block;
+	opacity:0;
+	-webkit-transition: all .35s;
+	   -moz-transition: all .35s;
+	        transition: all .35s;
+}
+.dropdown-menu .active { 
+	font-weight:bold;
+}
+.open .dropdown-menu { 
+	top:2px;
+	opacity:1;
+}
+
+.dropdown-menu
+{
+	margin-left: -35px;
+}
+
+.dropdown-menu>li {
+display: block;
+padding: 3px 20px;
+clear: both;
+font-weight: normal;
+line-height: 25px;
+color: #333;
+white-space: nowrap;
+
+}
+
+.dropdown-menu  { 
+	padding:10px 10px;
+	margin:0;
+	color:white;
+	text-decoration: none;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+
+
+ul li:hover {
+	width: 110px;
+	padding-left: -15px;
+	cursor: pointer;
+	background:#EEEEEE;
+	color:black;
+	padding:10px 8px 10px 10px;
+}
+
+
+/********************************************************/
+/*                   	 Titles	                        */
+/********************************************************/
 .title{
 	font-family: 'Wire One', Helvetica, Arial, sans-serif;
 	font-size: 5em;
@@ -15,12 +158,59 @@ body {
 	font-size: 1em;
 }
 
-p {
-	font-size: 14px;
+
+
+/********************************************************/
+/*                   Gallery Images                      */
+/********************************************************/
+.title-image{
+	width:110%; 
+	height:80px;
+	position: absolute;
+	z-index: 999;
+	color: black;
+	background: white;
+	opacity: 0.6;
+    filter: alpha(opacity=60);
 }
 
-img{ 
-	margin: 5%;
-	width: 100%;
+.title-image div{
+	z-index: 1000;
+	color: black;
+	
+	height:50px;
+	margin-top: 27px;
+	margin-left: 320px;
+	text-align: center;
+	position: center;
 }
 
+.hashtag-image{
+	
+	height:60px;
+	margin-top: 650px;
+	margin-left: 750px;
+	border-radius: 15px;
+	position: absolute;
+	z-index: 999;
+	color: black;
+	background: white;
+	opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.hashtag-image div{
+	z-index: 1000;
+	color: black;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+#content {
+	min-height: 85%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 85vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  float: none;
+}
