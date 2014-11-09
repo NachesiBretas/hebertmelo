@@ -29,6 +29,10 @@ body, #content
 	overflow-x = hidden;
 }
 
+.row{
+	margin-left: 0px;
+}
+
 /********************************************************/
 /*                    Top bar 		                    */
 /********************************************************/
@@ -60,38 +64,36 @@ body, #content
 }
 
 .navbar-toggle {
+	height: 37px;
+	width: 47px;
 	display:block;
-	background: rgba(255, 255, 255, 0.2);
-	top:10px; 
+	background: rgba(0, 0, 0, 0.12);
+	top:5px; 
 	outline: 0;
 	opacity: 1;
 	-webkit-transition: all .35s;
 	   -moz-transition: all .35s;
 	        transition: all .35s;
+	margin-right: 0px;
 }
 
-.navbar-toggle {
-background: rgba(0, 0, 0, 0.12);
+.open .navbar-toggle { 
+	top:-70px; 
+	opacity: 0;
 }
 
 .navbar-toggle .icon-bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #fff;
+	display: block;
+	width: 25px;
+	height: 3px;
+	background: black;
 }
-.navbar-toggle .icon-bar + .icon-bar {
-	margin-top: 4px;
-}
-.open .navbar-toggle { 
-	top:-70px; 
-	opacity: 0;  
-}
+
 .dropdown-menu {
 	top: -14em;
 	font-size: 13px;
 	background:none;
-	border:0 none;
+	border:none;
 	border-radius: 0px;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -103,26 +105,23 @@ background: rgba(0, 0, 0, 0.12);
 }
 .dropdown-menu .active { 
 	font-weight:bold;
+	border:none;
 }
 .open .dropdown-menu { 
 	top:2px;
 	opacity:1;
-}
-
-.dropdown-menu
-{
-	margin-left: -35px;
+	border:none;
 }
 
 .dropdown-menu>li {
-display: block;
-padding: 3px 20px;
-clear: both;
-font-weight: normal;
-line-height: 25px;
-color: #333;
-white-space: nowrap;
-
+	width: 100px;
+	display: block;
+	padding: 6px 0px 6px 0px;
+	clear: both;
+	font-weight: normal;
+	line-height: 25px;
+	color: #333;
+	white-space: nowrap;
 }
 
 .dropdown-menu  { 
@@ -137,12 +136,12 @@ white-space: nowrap;
 
 
 ul li:hover {
-	width: 110px;
-	padding-left: -15px;
+	width: 100px;
+	height: 40px;
 	cursor: pointer;
 	background:#EEEEEE;
 	color:black;
-	padding:10px 8px 10px 10px;
+	padding:10px 0px 10px 0px;
 }
 
 
@@ -209,8 +208,67 @@ ul li:hover {
 #content {
 	min-height: 85%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 85vh; /* These two lines are counted as one :-)       */
-
   display: flex;
   align-items: center;
-  float: none;
+}
+
+
+button#top-menu-button:focus {
+    outline:0  !important;
+}
+
+
+/********************************************************/
+/*                 UI - Thumbnails                      */
+/********************************************************/
+.thumbnail {
+	background-color: rgba(255,255,255,.2);
+	border: 0 none;
+	padding:10px;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}
+.thumbnail .caption {
+	color: inherit;
+}
+
+
+/********************************************************/
+/*                   Home Images                        */
+/********************************************************/
+
+.home-image{
+	width:310px; 
+	height:200px;
+	position: absolute;
+	z-index: 999;
+	display: block;
+	opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.home-image:hover{
+	position: absolute;
+	color: black;
+	background: white;
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.home-image div{
+	z-index: 1000;
+	color: white;
+	font-size: 25px;
+    background-color: black;
+    text-align: center;
+    margin-top: 25%;
+    margin-left: 20%;
+    width:155px;
+    border-radius:5px;
+}
+
+.ajax-navigation-link 
+{
+	cursor: pointer;
 }

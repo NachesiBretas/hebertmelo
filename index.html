@@ -23,7 +23,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container-fluid" style="width:95%; overflow:hidden;" id="body-wrapper">
+    <div class="container-fluid" style="width:95%; overflow:hidden; min-width:600px;" id="body-wrapper">
       <div class="row" id="top-row">
 
         <div class="col-xs-6 .col-sm-4 text-left" id="top-row-logo">
@@ -32,13 +32,17 @@
         
         <div class="col-xs-3 col-md-2 text-right pull-right" id="top-row-menu">
           <div class="dropdown">
-              <button type="button" class="navbar-toggle btn" data-toggle="dropdown"><i class="fa fa-reorder" style="font-size:20px;"></i></button>
+              <button type="button" class="navbar-toggle btn" data-toggle="dropdown" id="top-menu-button">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
               <!-- <a data-toggle="dropdown" href="#">Dropdown trigger</a> -->
               <ul class="dropdown-menu navigate-to-section" >
-                <li data-section="home" class="active">Home</li>
-                <li data-section="about">Quem sou?</li>
-                <li data-section="galery">Galerias</li>
-                <li data-section="contact">Contato</li>
+                <li class="ajax-navigation-link" data-section="home" class="active">Home</li>
+                <li  class="ajax-navigation-link"  data-section="about">Quem sou?</li>
+                <li  class="ajax-navigation-link"  data-section="galery">Galerias</li>
+                <li  class="ajax-navigation-link"  data-section="contact">Contato</li>
               </ul>
             </div>
         </div>

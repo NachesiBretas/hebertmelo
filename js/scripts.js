@@ -30,21 +30,31 @@ jQuery(document).ready(function($) {
 
 $(document).ready(function() {
 
-	$(".navigate-to-section li").each(function( index ) {
+	$.get("views/home.html",function(data){
+			$("#content").html(data).ready(function(){
+					generateNavigationLinks();
+				});
+			$("#content").fadeIn(1000);
+	},
+	"html");
+
+	generateNavigationLinks();
+
+});
+
+function generateNavigationLinks() {
+
+
+	$(".ajax-navigation-link").each(function( index ) {
   		var section = $(this).attr("data-section");
+  		$( this ).unbind("click");
   		$( this ).click(function() {
 
   			navigate(section,this);
   		});
 	});
 
-	$.get("views/home.html",function(data){
-			$("#content").html(data);
-			$("#content").fadeIn(1000);
-	},
-	"html");
-});
-
+}
 
 function navigate(section,obj)
 {
@@ -52,8 +62,13 @@ function navigate(section,obj)
 	$(obj).addClass("active");
 
 	$.get("views/"+section+".html",function(data){
+
 			$("#content").fadeOut(1000,function(){
-				$("#content").html(data);
+				
+				$("#content").html(data).ready(function(){
+					generateNavigationLinks();
+				});
+
 				$("#content").fadeIn(1000);
 			});
 
