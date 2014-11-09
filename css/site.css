@@ -15,8 +15,6 @@ p {
 }
 
 .home-sections-preview div img{ 
-	margin: 5%;
-	width: 87%;
 }
 
 .gallery-large-image{ 
@@ -239,8 +237,8 @@ button#top-menu-button:focus {
 /********************************************************/
 
 .home-image{
-	width:310px; 
-	height:200px;
+	width:100%; 
+	height:100%;
 	position: absolute;
 	z-index: 999;
 	display: block;
@@ -256,16 +254,15 @@ button#top-menu-button:focus {
     filter: alpha(opacity=50);
 }
 
-.home-image div{
+.home-image .title{
+	width: 35%;
 	z-index: 1000;
 	color: white;
-	font-size: 25px;
+	font-size: 35px ;
     background-color: black;
-    text-align: center;
     margin-top: 25%;
-    margin-left: 20%;
-    width:155px;
     border-radius:5px;
+    margin-left: 30%;
 }
 
 .ajax-navigation-link 
