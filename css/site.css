@@ -132,7 +132,7 @@ body, #content
 }
 
 
-ul li:hover {
+.dropdown ul li:hover {
 	width: 100px;
 	height: 40px;
 	cursor: pointer;
@@ -326,7 +326,7 @@ padding: 4px;
     width: 20000em;
     position: relative;
     list-style: none;
-    margin: 1%;
+    margin-top: 1%;
     padding: 0;
     overflow: hidden;
 }
@@ -359,6 +359,9 @@ padding: 4px;
 
 .connected-carousels .carousel-navigation li.active img {
     border:none;
+    text-decoration: none;
+    height: 55px;
+    width: 95px;
 }
 
 /** Stage carousel controls - Images**/
