@@ -65,7 +65,7 @@ body, #content
 	width: 47px;
 	display:block;
 	background: rgba(0, 0, 0, 0.12);
-	top:5px; 
+	top:2px; 
 	outline: 0;
 	opacity: 1;
 	-webkit-transition: all .35s;
@@ -113,16 +113,15 @@ body, #content
 .dropdown-menu>li {
 	width: 100px;
 	display: block;
-	padding: 6px 0px 6px 0px;
+	padding: 8px 0px 8px 10px;
 	clear: both;
-	font-weight: normal;
 	line-height: 25px;
+	height: 35px;
 	color: #333;
 	white-space: nowrap;
 }
 
 .dropdown-menu  { 
-	padding:10px 10px;
 	margin:0;
 	color:white;
 	text-decoration: none;
@@ -133,12 +132,14 @@ body, #content
 
 
 .dropdown ul li:hover {
-	width: 100px;
-	height: 40px;
+	padding-left: 10px;
+	height: 35px;
 	cursor: pointer;
 	background:#EEEEEE;
 	color:black;
-	padding:10px 0px 10px 0px;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
 }
 
 

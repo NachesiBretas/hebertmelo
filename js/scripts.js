@@ -97,8 +97,16 @@ function enableJCarousel () {
 
     $(function() {
         // Setup the carousels. Adjust the options for both carousels here.
-        var carouselStage      = $('.carousel-stage').jcarousel();
-        var carouselNavigation = $('.carousel-navigation').jcarousel();
+        var carouselStage      = $('.carousel-stage').jcarousel({wrap: 'circular'}).jcarouselAutoscroll({
+            interval: 3000,
+            target: '+=1',
+            autostart: true
+        });
+        var carouselNavigation = $('.carousel-navigation').jcarousel({wrap: 'circular'}).jcarouselAutoscroll({
+            interval: 3000,
+            target: '+=1',
+            autostart: true
+        });
 
         // We loop through the items of the navigation carousel and set it up
         // as a control for an item from the stage carousel.
