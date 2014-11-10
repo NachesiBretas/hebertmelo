@@ -67,6 +67,12 @@ function navigate(section,obj)
 				
 				$("#content").html(data).ready(function(){
 					generateNavigationLinks();
+
+                    if(section == "carousel")
+                    {
+                            enableJCarousel();
+                    }
+
 				});
 
 				$("#content").fadeIn(1000);
@@ -79,9 +85,7 @@ function navigate(section,obj)
 
 
 
-/*  carousel
-
-(function($) {
+function enableJCarousel () {
     // This is the connector function.
     // It connects one item from the navigation carousel to one item from the
     // stage carousel.
@@ -164,5 +168,4 @@ function navigate(section,obj)
                 target: '+=1'
             });
     });
-})(jQuery);
-*/
+}

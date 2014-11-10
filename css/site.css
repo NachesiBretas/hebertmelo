@@ -6,7 +6,6 @@ body {
 	font-weight: normal;
 	font-size: 20px;
 	color: #333333;
-	text-align: center;
 	height: 100%;
 }
 
@@ -149,10 +148,12 @@ ul li:hover {
 .title{
 	font-family: 'Wire One', Helvetica, Arial, sans-serif;
 	font-size: 5em;
+	text-align: center;
 }
 
 .second-title{
 	font-size: 1em;
+	text-align: center;
 }
 
 
@@ -175,6 +176,7 @@ ul li:hover {
     margin-top: 6%;
 	font-size: 1em;
 	color: black;
+	text-align: center;
 }
 
 .hashtag-image {
@@ -291,32 +293,26 @@ padding: 4px;
 /***********************************************************/
 /** Stage container **/
 
-.connected-carousels .stage {
-    width: 620px;
-    margin: 20px auto;
+.connected-carousels .stage{
+	margin-top: 5%;
+    width: 100%;
     position: relative;
 }
-
-.connected-carousels .photo-credits {
-    position: absolute;
-    right: 15px;
-    bottom: 0;
-    font-size: 13px;
-    color: #fff;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
-    opacity: .66;
-}
-
-.connected-carousels .photo-credits a {
-    color: #fff;
+.carousel-stage img{
+	height:500px;
+	width: 1000px;
 }
 
 /** Navigation container **/
 
 .connected-carousels .navigation {
-    width: 260px;
-    margin: 20px auto;
+    width: 41%;
+    margin: 3% auto;
     position: relative;
+}
+
+.carousel-navigation img{
+	height:50px;
 }
 
 /** Shared carousel styles **/
@@ -330,34 +326,20 @@ padding: 4px;
     width: 20000em;
     position: relative;
     list-style: none;
-    margin: 0;
+    margin: 1%;
     padding: 0;
+    overflow: hidden;
 }
 
 .connected-carousels .carousel li {
     float: left;
 }
 
-/** Stage carousel specific styles **/
-
-.connected-carousels .carousel-stage {
-    height: 400px;
-    border: 10px solid #fff;
-    -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
-    -webkit-box-shadow: 0 0 2px #999;
-       -moz-box-shadow: 0 0 2px #999;
-            box-shadow: 0 0 2px #999;
-}
-
 /** Navigation carousel specific styles **/
 
 .connected-carousels .carousel-navigation {
     height: 60px;
-    width: 240px;
     background: #fff;
-    border: 10px solid #fff;
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
             border-radius: 5px;
@@ -372,22 +354,22 @@ padding: 4px;
 
 .connected-carousels .carousel-navigation li img {
     display: block;
-    border: 5px solid #fff;
+    border: 1px solid #fff;
 }
 
 .connected-carousels .carousel-navigation li.active img {
-    border-color: #ccc;
+    border:none;
 }
 
-/** Stage carousel controls **/
+/** Stage carousel controls - Images**/
 
 .connected-carousels .prev-stage,
 .connected-carousels .next-stage {
     display: block;
     position: absolute;
     top: 0;
-    width: 305px;
-    height: 410px;
+    width: 50%;
+    height: 100%;
     color: #fff;
 }
 
@@ -412,7 +394,7 @@ padding: 4px;
     width: 30px;
     height: 30px;
     text-align: center;
-    background: #4E443C;
+    background: #999999;
     color: #fff;
     text-decoration: none;
     text-shadow: 0 0 1px #000;
@@ -438,7 +420,7 @@ padding: 4px;
     display: block;
 }
 
-/** Navigation carousel controls **/
+/** Navigation carousel controls - bottom**/
 
 .connected-carousels .prev-navigation,
 .connected-carousels .next-navigation {
@@ -446,7 +428,7 @@ padding: 4px;
     position: absolute;
     width: 30px;
     height: 30px;
-    background: #4E443C;
+    background: #999999;
     color: #fff;
     text-decoration: none;
     text-shadow: 0 0 1px #000;
@@ -461,13 +443,13 @@ padding: 4px;
 
 .connected-carousels .prev-navigation {
     left: -15px;
-    top: 22px;
+    top: 25%;
     text-indent: 6px;
 }
 
 .connected-carousels .next-navigation {
     right: -15px;
-    top: 22px;
+    top: 25%;
     text-indent: 20px;
 }
 
