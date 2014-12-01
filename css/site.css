@@ -51,7 +51,17 @@ body, #content
 	margin-top: 3%;
 }
 
+#top-row-logo-pa img 
+{
+	width:190px; 
+	margin-top: 3%;
+}
 
+#top-row-button
+{
+	padding-right: 20%;
+	padding-top: 3%;
+}
 
 /********************************************************/
 /*                    Navigation bar                    */
@@ -153,7 +163,9 @@ body, #content
 }
 
 .second-title{
-	font-size: 1em;
+	font-family: 'Wire One', Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
 	text-align: center;
 }
 
@@ -200,10 +212,10 @@ body, #content
 }
 
 #content {
-	min-height: 85%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 85%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 85vh; /* These two lines are counted as one :-)       */
   display: flex;
-  align-items: center;
+  align-items: center; /*isso que alinha no chrome*/
 }
 
 
@@ -262,7 +274,7 @@ button#top-menu-button:focus {
     max-height: 50px;
 }
 
-.ajax-navigation-link 
+.ajax-navigation-link, .ajax-navigation-external-link
 {
 	cursor: pointer;
 }
@@ -285,8 +297,17 @@ padding: 4px;
 
 .btn-default {
 	background-color: #999999;
+	font-family:Helvetica, Arial, sans-serif;
 }
 
+.btn-register {
+	background-color: orange;
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	width: 200px;
+	height: 50px;
+}
 
 
 /***********************************************************/
@@ -462,3 +483,6 @@ padding: 4px;
     opacity: .5;
     cursor: default;
 }
+
+
+

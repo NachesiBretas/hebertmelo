@@ -26,8 +26,6 @@ jQuery(document).ready(function($) {
 });
 
 
-
-
 $(document).ready(function() {
 
 	$.get("views/home.html",function(data){
@@ -51,6 +49,14 @@ function generateNavigationLinks() {
   		$( this ).click(function() {
 
   			navigate(section,this);
+  		});
+	});
+
+	$(".ajax-navigation-external-link").each(function( index ) {
+  		var externalSection = $(this).attr("data-section");
+  		$( this ).unbind("click");
+  		$( this ).click(function() {
+  			window.location.href= externalSection;
   		});
 	});
 
