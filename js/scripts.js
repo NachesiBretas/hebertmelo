@@ -80,7 +80,7 @@ function navigate(section,obj)
                     }
 
 				});
-
+                window.scrollTo(0, 0);
 				$("#content").fadeIn(1000);
 			});
 
