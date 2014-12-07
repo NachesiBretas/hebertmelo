@@ -312,7 +312,7 @@ padding: 4px;
 }
 
 .btn-register {
-	background-color: orange;
+	background-color: rgba(0, 0, 0, 0.12);
 	font-family:Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 16px;
@@ -322,7 +322,7 @@ padding: 4px;
 }
 
 .btn-sign-in {
-	background-color: orange;
+	background-color: rgba(0, 0, 0, 0.12);
 	font-family:Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 17px;

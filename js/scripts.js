@@ -67,7 +67,7 @@ function navigate(section,obj)
 	$(".navigate-to-section li").removeClass("active");
 	$(obj).addClass("active");
 
-	$.get("views/"+section+".html",function(data){
+	$.get(section,function(data){
 
 			$("#content").fadeOut(1000,function(){
 				
@@ -86,6 +86,17 @@ function navigate(section,obj)
 
 	},
 	"html");
+}
+
+function simpleNavigate(section)
+{
+    $.get(section,function(data){
+        $("#content").html(data).ready(function(){
+            generateNavigationLinks();
+        });
+        window.scrollTo(0, 0);
+    },
+    "html");
 }
 
 
@@ -182,4 +193,50 @@ function enableJCarousel () {
                 target: '+=1'
             });
     });
+}
+
+function submitLoginForm() {
+
+    var email = $('#loginEmail').val();
+    var pass = $('#loginPassword').val();
+
+    $.post( "../../models/script_login.php", { email: email, password: pass })
+      .done(function( data ) {
+        //alert( "Data Loaded: -" + data + "-" );
+        if(data == "true")
+        {
+            simpleNavigate("views/mainpage.html");
+        }
+        if(data == "false")
+        {
+            alert("E-mail ou senha incorretos!");
+            simpleNavigate("views/login.html");
+        }
+      })
+
+
+
+}
+
+function submitRegisterForm() {
+
+    var email = $('#registerEmail').val();
+    var pass = $('#registerPassword').val();
+    var name = $('#registerName').val();
+    var type = $('#registerType').val();
+
+    $.post( "../../models/script_registration.php", { email: email, password: pass, name: name, type: type })
+      .done(function( data ) {
+        //alert( "Data Loaded: -" + data + "-" );
+        if(data == "true")
+        {
+            simpleNavigate("views/mainpage.html");
+        }
+        if(data == "false")
+        {
+            alert("Ocorreu um problema, tente novamente!");
+            simpleNavigate("views/register.html");
+        }
+      })
+
 }
