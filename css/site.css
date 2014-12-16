@@ -21,6 +21,10 @@ p, td {
 	width: 90%;
 }
 
+.gallery-large-image-vertical{ 
+	margin: 5%;
+}
+
 body, #content 
 {
 	overflow-x = hidden;
@@ -205,7 +209,7 @@ body, #content
 
 .hashtag-image {
 	width: 25%;
-	height: 7%;
+	height: 50px;
     margin: 5%;
     border-radius: 10px;
     position: absolute;
