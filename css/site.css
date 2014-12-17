@@ -21,10 +21,6 @@ p, td {
 	width: 90%;
 }
 
-.gallery-large-image-vertical{ 
-	margin: 5%;
-}
-
 body, #content 
 {
 	overflow-x = hidden;
