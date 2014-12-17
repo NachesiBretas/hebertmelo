@@ -74,7 +74,7 @@ function navigate(section,obj)
 				$("#content").html(data).ready(function(){
 					generateNavigationLinks();
 
-                    if(section == "carousel")
+                    if(section == "views/carousel.html")
                     {
                             enableJCarousel();
                     }

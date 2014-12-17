@@ -348,8 +348,7 @@ padding: 4px;
     position: relative;
 }
 .carousel-stage img{
-	height:500px;
-	width: 1000px;
+	width: 1500px;
 }
 
 /** Navigation container **/
