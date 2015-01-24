@@ -1,19 +1,19 @@
 <?php 
 
 class modelo {
-/*	
+	
 	var $servidor = "localhost";
 	var $usuario = "root";
 	var $senha = "";
 	var $bd = "exchange";
 	var $conn;
-*/
+/*
 	var $servidor = "dbmy0055.whservidor.com";
 	var $usuario = "hebertmelo";
 	var $senha = "sichem93";
 	var $bd = "hebertmelo";
 	var $conn;	
-
+*/
 
 	function __construct() {
 		$this->conn = mysql_connect($this->servidor, $this->usuario, $this->senha) or die ("Error");		
@@ -22,6 +22,11 @@ class modelo {
 	
 	function getUsuario($email,$password){
 		$result = mysql_query("select id,name,type,status from user where email like '".$email."' and password like '".$password."' ");
+		return $result;
+	}
+
+	function listEmails(){
+		$result = mysql_query("select name,email,type from user where status = 1");
 		return $result;
 	}
 

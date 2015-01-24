@@ -1,4 +1,9 @@
 <div class="container-fluid">
+<?php
+	include("../../modelo.php");
+	$modelo = new modelo();
+
+	if($type_user != 1){ ?>
 	<h2 class="title"> Obrigado! </h2> 
 	<div class="col-md-6 col-md-offset-3 text-justify">
 		<p>
@@ -8,4 +13,14 @@
 		Após o envio das fotos a equipe do permuta artística irá te indicar para o trabalho disponível dentro do seu perfil.
 		</p>
 	</div>
+  <?php }
+	else{?>
+	<h2 class="title"> Lista de cadastrados </h2> 
+	<div class="col-md-6 col-md-offset-3 text-justify">
+	<?php
+			print_r($modelo->listEmails());
+			exit;
+	?>
+	</div>
+	<?}?>
 </div>

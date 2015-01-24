@@ -21,10 +21,6 @@ p, td {
 	width: 90%;
 }
 
-.gallery-large-image-vertical{ 
-	margin: 5%;
-}
-
 body, #content 
 {
 	overflow-x = hidden;
@@ -343,25 +339,15 @@ padding: 4px;
 /** Stage container **/
 
 .connected-carousels .stage{
-	margin-top: 5%;
-    width: 100%;
+	margin-top: 1%;
+    width: 850px;
     position: relative;
 }
 .carousel-stage img{
-	width: 1500px;
+	width: 850px;
+	height: 500px;
 }
 
-/** Navigation container **/
-
-.connected-carousels .navigation {
-    width: 41%;
-    margin: 3% auto;
-    position: relative;
-}
-
-.carousel-navigation img{
-	height:50px;
-}
 
 /** Shared carousel styles **/
 
@@ -371,7 +357,7 @@ padding: 4px;
 }
 
 .connected-carousels .carousel ul {
-    width: 20000em;
+    width: 9000em;
     position: relative;
     list-style: none;
     margin-top: 1%;
