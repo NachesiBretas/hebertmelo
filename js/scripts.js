@@ -9,6 +9,17 @@ function getSectionURL(friendlyUrl) {
     var url = "";
     switch(friendlyUrl){
         case "#gallery": url = "views/gallery.html"; break;
+        case "#about": url = "views/about.html"; break;
+        case "#contact": url = "views/contact.html"; break;
+        case "#amanda": url = "views/amanda.html"; break;
+        case "#color": url = "views/color.html"; break;
+        case "#gabi": url = "views/gabi.html"; break;
+        case "#people": url = "views/people.html"; break;
+        case "#davi": url = "views/davi.html"; break;
+        case "#agnes": url = "views/agnes.html"; break;
+        case "#sophia": url = "views/sophia.html"; break;
+        case "#leticia": url = "views/leticia.html"; break;
+        case "#cecilia": url = "views/cecilia.html"; break;
         default : url = "views/home.html"; break;
     }
 
@@ -44,7 +55,6 @@ $(document).ready(function() {
             $("#content").html(data).ready(function(){
                     generateNavigationLinks();
                 });
-            $("#content").fadeIn(1000);
         },
         "html");
     }
@@ -55,7 +65,6 @@ $(document).ready(function() {
             $("#content").html(data).ready(function(){
                     generateNavigationLinks();
                 });
-            $("#content").fadeIn(1000);
         },
         "html");
     }
@@ -70,7 +79,6 @@ window.onhashchange = function() {
             $("#content").html(data).ready(function(){
                     generateNavigationLinks();
                 });
-            $("#content").fadeIn(1000);
         },
         "html");
     }
@@ -81,7 +89,6 @@ window.onhashchange = function() {
             $("#content").html(data).ready(function(){
                     generateNavigationLinks();
                 });
-            $("#content").fadeIn(1000);
         },
         "html");
     }
@@ -119,22 +126,18 @@ function navigate(section,obj)
 	$(obj).addClass("active");
 
 	$.get(section,function(data){
-
-			$("#content").fadeOut(1000,function(){
 				
-				$("#content").html(data).ready(function(){
-					generateNavigationLinks();
+		$("#content").html(data).ready(function(){
+			generateNavigationLinks();
 
-                    if(section == "views/carousel.html")
-                    {
-                            enableJCarousel();
-                    }
+            if(section == "views/carousel.html")
+            {
+                enableJCarousel();
+            }
 
-				});
-                window.scrollTo(0, 0);
-				$("#content").fadeIn(1000);
-			});
-
+		});
+        window.scrollTo(0, 0);
+	
 	},
 	"html");
 }
